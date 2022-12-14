@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
 
 :root {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Chivo Mono', monospace;
     --second-color: #00ADB5;
     --background-color: #222831;
     --mid-color: #393E46;
@@ -13,7 +13,39 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: var(--background-color);
+}
+
+.bg {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    background: linear-gradient(245deg, #1d3a65, #165f67);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 11s ease infinite;
+    -moz-animation: AnimationName 11s ease infinite;
+    animation: AnimationName 11s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 77%}
+    50%{background-position:100% 24%}
+    100%{background-position:0% 77%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 77%}
+    50%{background-position:100% 24%}
+    100%{background-position:0% 77%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 77%}
+    50%{background-position:100% 24%}
+    100%{background-position:0% 77%}
 }
 
 body {
@@ -26,7 +58,6 @@ body {
 * {
     border: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -55,7 +86,7 @@ button:hover {
 
 .modal h1 {
     display: block;
-    border-bottom: 1px solid var(--main-color);
+    border-bottom: 0px;
     margin-bottom: .5em;
     padding-top: .5em;
     margin: 0 0 .25em 0;

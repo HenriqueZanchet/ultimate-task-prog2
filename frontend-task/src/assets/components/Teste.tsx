@@ -19,6 +19,7 @@ export default function () {
   }
 
   return <>
+    <div className='bg'></div>
     <h1>teste</h1>
     <h2>Buscar dados do Usuário Logado</h2>
     <div>

@@ -32,13 +32,27 @@ export default function ({ setRoute }: { setRoute: Dispatch<SetStateAction<strin
   }
 
   return <>
-    <form onSubmit={enviarDados}>
+    <div className='bg'></div>
+    <div className='modal'>
       <h1>Cadastro</h1>
-      <button onClick={() => setRoute("login")}>Voltar</button>
-      <input name="_name" placeholder="name" />
-      <input name="email" placeholder="email" />
-      <input name="password" type="password" placeholder="password" />
-      <button>cadastrar-se</button>
-    </form>
+      <form onSubmit={enviarDados}>
+        <div>
+         <label htmlFor="_name">Nome</label>
+          <input name="_name" placeholder="nome" />
+        </div>
+        <div>
+          <label htmlFor="email">E-mail</label>
+          <input name="email" placeholder="email" />
+        </div>
+        <div>
+          <label htmlFor="password">Senha</label>
+          <input name="password" type="password" placeholder="Senha" />
+        </div>
+      <div className='action'>
+        <button onClick={() => setRoute("login")}>Voltar</button>
+        <button>Cadastrar-se</button>
+      </div>
+      </form>
+    </div>
   </>
 }

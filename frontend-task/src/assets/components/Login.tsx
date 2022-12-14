@@ -44,6 +44,7 @@ export default function ({ setRoute }: { setRoute: Dispatch<SetStateAction<strin
   })
 
   return <>
+    <div className='bg'></div>
     <div className="modal">
       <h1>Login</h1>
       <form onSubmit={onSubmit} id="login">
@@ -57,7 +58,7 @@ export default function ({ setRoute }: { setRoute: Dispatch<SetStateAction<strin
         </div>
       <div className="action">
         <button type="submit" form="login">Entrar</button>
-        <button onClick={() => setRoute("register")}>Cadastrar-se</button>
+        <button onClick={() => setRoute("cadastro")}>Cadastrar-se</button>
       </div>
       </form>
     </div>
